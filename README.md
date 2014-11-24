@@ -37,3 +37,23 @@ $ schemas generate Book --mysql
 // Helper to generate tables?
 
 ```
+
+## Ideal usage as a library
+
+```
+var schemas = require('schemas');
+var schemaorg = schema('http://schema.rdfs.org/all.json');
+
+var station1 = new schemaorg.TrainStation({
+ geo: {longitude:10, latitude:20}
+})
+
+var station2 = new schemaorg.TrainStation({
+ geo: {longitude:10, latitude:20}
+})
+
+var station2 = new schemaorg.TrainTrip({
+  departureStation: station1,
+  arrivalStation:station2
+})
+```
