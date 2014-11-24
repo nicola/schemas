@@ -12,12 +12,12 @@ Schemas are the fundamental building block for a Linked Data web. It would be sa
 This library simplifying searching and querying different data schemas proving a command-line tool and a library for NodeJS.
 
 ## Install
-```
+```bash
 $ npm install -g schemas
 ```
 
 ## Ideal usage
-```
+```bash 
 $ schemas search T
 (schema.org) Text
 (schema.org) Time
@@ -40,7 +40,7 @@ $ schemas generate Book --mysql
 
 ## Ideal usage as a library
 
-```
+```javascript
 var schemas = require('schemas');
 var schemaorg = schema('http://schema.rdfs.org/all.json');
 
